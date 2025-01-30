@@ -1,8 +1,7 @@
-
-*{
+* {
   font-size: large;
 }
-.add-button {
+.add-button{
   height: 40px;
   width: 100px;
   font-weight: 800;
@@ -12,9 +11,8 @@
   color: black;
   border-radius: 30px;
 }
-
 .actionButton {
-  margin: 2rem;
+  margin: 5px 2rem;
   display: flex;
   justify-content: end;
 }
@@ -28,11 +26,39 @@
   color: blue;
   text-decoration: underline;
   font-size: larger;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
 
-.heading{
+.heading {
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size:x-large;
+  font-size: x-large;
+}
+
+.form{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 25px;
+}
+
+.form input,select{
+  width: 450px;
+  height: 30px;
+}
+
+.submit-button{
+  margin-top: 20px;
+  width: 450px;
+  height: 50px;
+  border: 0px;
+  background-color: seagreen;
+  color:azure;
+  border-radius: 18px;
+  transition: all 0.3s linear;
+}
+
+.submit-button:hover{
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(68, 182, 78, 0.5);
+  background-color: rgba(46, 139, 86, 0.822);
+
 }
