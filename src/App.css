@@ -1,0 +1,38 @@
+
+*{
+  font-size: large;
+}
+.add-button {
+  height: 40px;
+  width: 100px;
+  font-weight: 800;
+  font-size: larger;
+  font-family: monospace;
+  background-color: greenyellow;
+  color: black;
+  border-radius: 30px;
+}
+
+.actionButton {
+  margin: 2rem;
+  display: flex;
+  justify-content: end;
+}
+.commandCell {
+  text-align: center;
+}
+
+.commandCell span {
+  margin: 8px;
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+  font-size: larger;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.heading{
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size:x-large;
+}
