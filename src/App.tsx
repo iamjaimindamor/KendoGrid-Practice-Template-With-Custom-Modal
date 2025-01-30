@@ -2,7 +2,7 @@ import "./App.css";
 import { Grid } from "@progress/kendo-react-grid";
 import { GridColumn as Column } from "@progress/kendo-react-grid";
 import "@progress/kendo-theme-default/dist/all.css";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { stateData } from "./initialData";
 import InfoComponent from "./InfoComponent";
 import { DataState } from "../interface/dataState";
@@ -17,7 +17,7 @@ function App() {
     return (
       <td key={"command"} className="commandCell">
         <span onClick={()=>handleEdit(dataItem)}>Edit</span>
-        <span>Delete</span>
+        <span onClick={()=>handleDelete(dataItem)}>Delete</span>
       </td>
     );
   };
@@ -43,7 +43,11 @@ function App() {
     SetEditState(data);
     return data;
   }
-
+ 
+  const handleDelete = (items:any)=>{
+    const val = result.filter(item=>item!=items.dataItem);
+    setResult(val);
+  }
 
   const ticketGenerator = () => {
     let ticketId;
@@ -66,7 +70,8 @@ function App() {
       setResult(result.map(ticket => ticket.ticketID == ticketID?{...ticket, title:event.target[0].value,
         assignedTo:event.target[1].value,
         Requester:event.target[2].value,
-        ticketStatus:event.target[3].value,}:ticket))
+        ticketStatus:event.target[3].value,}:ticket));
+        SetEditorMode(false);
     }
     closeModal();
   }

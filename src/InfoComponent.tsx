@@ -13,13 +13,15 @@ const InfoComponent = (props: any) => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    props.callback(e,props.dataItem.ticketID);
+    if(props.editor){
+        props.callback(e,props.dataItem.ticketID);
+    }else{
+        props.callback(e);
+    }
     props.formRef(formRef);
   };
   useEffect(() => {
-    console.log(formRef.current);
-    console.log(props);
-    // formRef.current[1].value = props.dataItem.ticketID;
+    
     if (props.dataItem&&props.editor) {
       formRef.current[0].value = props.dataItem.title;
       formRef.current[1].value = props.dataItem.assignedTo;
